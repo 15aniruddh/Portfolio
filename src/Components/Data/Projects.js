@@ -18,5 +18,15 @@ export const ProjectData =[
         image:require('../../Pics/LifeCare-Portal.png'),
         gitlab:"https://gitlab.com/15aniruddh/lifecare-portal/-/tree/master",
         
+    },
+    {
+        id: 3,
+        title:"Recipe Book",
+        about:"Recipe Book is a project that combines the latest web development technologies to create a dynamic recipe book application. This project uses Angular 2, a popular JavaScript framework for building modern web applications, and Firebase, a real-time database platform that provides a simple way to store and sync data in real-time. The recipe book application allows users to create, view, and share their favorite recipes with others. With the Firebase real-time database, any changes made to a recipe will be updated in real-time, allowing for a seamless and collaborative experience for users.",
+        tags:["Angular2.js","HTML5","CSS","TypeScript","Firebase","Bootstrap"],
+        github:"https://github.com/15aniruddh/Recipe_Book",
+        image:require('../../Pics/Recipe-Book.png'),
+        gitlab:"https://gitlab.com/15aniruddh/lifecare-portal/-/tree/master",
+        
     }
 ]
