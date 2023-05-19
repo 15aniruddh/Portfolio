@@ -26,7 +26,7 @@ export const ProjectData =[
         tags:["Angular2.js","HTML5","CSS","TypeScript","Firebase","Bootstrap"],
         github:"https://github.com/15aniruddh/Recipe_Book",
         image:require('../../Pics/Recipe-Book.png'),
-        gitlab:"https://gitlab.com/15aniruddh/lifecare-portal/-/tree/master",
+        gitlab:"",
         
     }
 ]
