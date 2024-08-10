@@ -1,5 +1,5 @@
 .about {
-    padding: 48px;
+    padding: 30px;
 }
 
 .about-top {
@@ -10,10 +10,13 @@
 
 .about-info {
     font-size: 24px;
+    justify-content: center;
+    align-items: center;
 }
 
 .picture {
-    height: 420px;
+    width: 400px;
+    height: 400px;
 }
 
 .info-name {

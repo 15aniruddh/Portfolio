@@ -21,11 +21,7 @@ export const SkillData = [
             {
                 name: 'JavaScript',
                 icon: <i class="devicon-javascript-plain colored"></i>              
-            },
-            {
-                name: 'JQuery',
-                icon: <i class="devicon-jquery-plain colored"></i>              
-            },            
+            },         
             {
                 name: 'ReactJS',
                 icon: <i class="devicon-react-original colored"></i>                    
@@ -48,6 +44,18 @@ export const SkillData = [
                 icon: <i class="devicon-java-plain colored"></i>                            
             },
             {
+                name: 'Python',
+                icon: <i class="devicon-python-plain"></i>                                                                
+            },
+            {
+                name: 'MongoDB',
+                icon: <i class="devicon-mongodb-plain colored"></i>                                  
+            },
+            {
+                name: 'Redis',
+                icon: <i class="devicon-redis-plain colored"></i>                                  
+            },
+            {
                 name: 'MySQL',
                 icon: <i class="devicon-mysql-plain colored"></i>                                  
             },
@@ -65,21 +73,25 @@ export const SkillData = [
         type: 'Others',
         list: [
             {
-                name: 'GitLab',
-                icon: <i class="devicon-gitlab-plain colored"></i>                                 
-            },
-            {
                 name: 'GitHub',
                 icon: <i class="devicon-github-original colored"></i>                                          
+            },
+            {
+                name: 'BitBucket',
+                icon: <i class="devicon-bitbucket-plain colored"></i>                                 
+            },
+            {
+                name: 'GitLab',
+                icon: <i class="devicon-gitlab-plain colored"></i>                                 
             },
             {
                 name: 'Docker',
                 icon: <i class="devicon-docker-plain colored"></i>                                 
             },
             {
-                name: '.Net',
-                icon: <i class="devicon-dotnetcore-plain"></i>                                                                      
-            },
+                name: 'AWS',
+                icon: <i class="devicon-amazonwebservices-plain-wordmark"></i>                                               
+            }
         ],
     }
 ]
