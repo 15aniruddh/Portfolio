@@ -3,10 +3,16 @@ import './web.css'
 import { AiOutlineFundProjectionScreen } from "react-icons/ai";
 import { FaLaptopCode } from "react-icons/fa";
 import { AiOutlineUser } from "react-icons/ai";
+import { MdWorkHistory } from "react-icons/md";
 
 function Web() {
   return (
     <div className='web'>
+        <div className='web-option'>
+            <a href='#experience'>
+            <MdWorkHistory className='option-icon'/>&nbsp;Experience
+            </a>
+        </div>
         <div className='web-option'>
             <a href='#project'>
             <AiOutlineFundProjectionScreen className='option-icon'/>&nbsp;Project

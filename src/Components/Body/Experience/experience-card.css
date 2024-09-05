@@ -1,0 +1,100 @@
+.experience-card {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    margin: 16px 0px;
+    padding: 8px 0px;
+}
+
+.experience-photo {
+    width: 40%;
+    margin: 50px 0px 50px 0px;
+}
+
+.experience-info {
+    margin-right: 24px;
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.experience-title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.experience-date {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+.experience-tags {
+    display: flex;
+    max-width: 60%;
+    flex-wrap: wrap;
+}
+
+.tag {
+    padding:4px 8px;
+    background-color: aquamarine;
+    border-radius: 4px;
+    margin-right: 6px;
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+
+.experience-links a {
+    text-decoration: none;
+    color: black;
+}
+
+.experience-info ul {
+    font-size: x-large;
+}
+
+.experience-links {
+    display: flex;
+    margin-top: 6px;
+}
+
+.link-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+    width: max-content;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-right: 6px;
+}
+
+.link-button i {
+    display: flex;
+    align-items: center;
+    mask-repeat: 4px;
+}
+
+@media only screen and (max-width : 768px) {
+    .experience-photo {
+        width: 70%;
+    }
+
+    .experience-card {
+        flex-direction: column-reverse;
+    }
+
+    .experience-info {
+        margin-left: 0px;
+        margin-top: 12px;
+    }
+
+    .experience-tags {
+        max-width: 100%;
+    }
+}

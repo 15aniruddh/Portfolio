@@ -4,6 +4,7 @@ import { IoMdCloseCircleOutline } from "react-icons/io";
 import { AiOutlineFundProjectionScreen } from "react-icons/ai";
 import { FaLaptopCode } from "react-icons/fa";
 import { AiOutlineUser } from "react-icons/ai";
+import { MdWorkHistory } from "react-icons/md";
 
 function Mobile({isOpen, setIsOpen}) {
   return (
@@ -12,6 +13,11 @@ function Mobile({isOpen, setIsOpen}) {
             <IoMdCloseCircleOutline/>
         </div>
         <div className='mobile-options'>
+        <div className='mobile-option'>
+            <a href='#experience'>
+            <MdWorkHistory className='option-icon'/>&nbsp;Experience
+            </a>
+        </div>
         <div className='mobile-option'>
             <a href='#project'>
             <AiOutlineFundProjectionScreen className='option-icon'/> Project
