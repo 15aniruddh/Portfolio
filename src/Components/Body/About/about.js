@@ -1,5 +1,4 @@
 import React from "react";
-import SocialContact from "../../Common/Social Contact/SocialContact";
 import "./about.css";
 
 function About() {
