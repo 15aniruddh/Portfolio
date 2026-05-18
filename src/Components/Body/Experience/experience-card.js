@@ -5,9 +5,12 @@ function ExperienceCard({ experience }) {
   const listItems = experience.about
     .split('\n')
     .filter(item => item.trim() !== '')
-    .map((item, index) => (
-      <li key={index}>{item.trim().replace(/^–\s*/, '')}</li>
-    ));
+    .map((item, index) => {
+      const cleanedText = item.trim().replace(/^–\s*/, '').replace(/^-\s*/, '');
+      return (
+        <li key={index} dangerouslySetInnerHTML={{ __html: cleanedText }} />
+      );
+    });
 
   return (
     <div className='experience-card'>

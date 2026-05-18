@@ -70,7 +70,7 @@ export const SkillData = [
         ],
     },
     {
-        type: 'Others',
+        type: 'DevOps',
         list: [
             {
                 name: 'GitHub',

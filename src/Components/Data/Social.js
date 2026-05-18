@@ -13,16 +13,5 @@ export const SocialData =[
         platform: "GitLab",
         link: "https://gitlab.com/users/15aniruddh/projects",
         icon: require('../../Pics/GitLab.webp'),
-    },    
-    {
-        platform: "Facebook",
-        link: "https://www.facebook.com/smarty.aniruddh.007",
-        icon: require('../../Pics/Facebook.webp'),
-    },
-    {
-        platform: "Instagram",
-        link: "https://www.instagram.com/15aniruddh/",
-        icon: require('../../Pics/Instagram.webp'),
-    }  
-    
+    }
 ];
