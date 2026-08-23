@@ -1,23 +1,8 @@
-html {
-    scroll-behavior: smooth;
-}
-
 .home {
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    margin: auto;
-
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-@media only screen and (max-width : 1024px) {
-.home {
-    width: 90%;
-    }
-}
-
-@media only screen and (max-width : 512px) {
-.home {
-    width: 100%;
-    }
-}
+.home > .body { flex: 1; }

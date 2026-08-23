@@ -1,30 +1,48 @@
 .skill-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 6px;
-    height: 120px;
-    width: max-content;
-    padding: 8px 16px;
-    border-radius: 8px;
+  display: flex;
+  /* Allow the cell to shrink below the label's intrinsic width */
+  min-width: 0;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.55rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: var(--surface);
+  transition: border-color 0.25s var(--ease), background 0.25s var(--ease),
+    transform 0.25s var(--ease);
+}
+
+.skill-card:hover {
+  border-color: var(--primary);
+  background: rgba(168, 85, 247, 0.12);
+  transform: translateY(-3px);
 }
 
 .skill-icon {
-    font-size: 80px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+/* Some devicon glyphs render monochrome-dark; keep them legible on the
+   dark surface without overriding the branded colours. */
+.skill-icon .devicon-github-original,
+.skill-icon .devicon-nextjs-plain,
+.skill-icon .devicon-vercel-original,
+.skill-icon .devicon-amazonwebservices-plain-wordmark {
+  color: var(--text);
 }
 
 .skill-name {
-    font-size: 18px;
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  color: var(--text-muted);
+  /* Never let a long label blow out its column */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-@media only screen and (max-width : 768px) {
-    .skill-icon {
-        font-size: 60px;
-    }
-
-    .skill-card {
-        height: 100px;
-        width: max-content;
-    }
-}
+.skill-card:hover .skill-name { color: var(--text); }

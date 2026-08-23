@@ -1,47 +1,229 @@
-.header {
-    display: flex;
-    justify-content: space-between;
-    flex: 1;
-    padding: 12px;
-    position: relative;
-    align-items: center;
+.site-header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 100;
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid transparent;
+  transition: background 0.35s var(--ease), border-color 0.35s var(--ease),
+    backdrop-filter 0.35s var(--ease);
 }
 
-.menu {
-    display: flex;
-    justify-content: flex-end;
-    flex: 1;
+.site-header.is-scrolled {
+  background: rgba(17, 7, 31, 0.72);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  border-bottom-color: var(--border);
 }
 
-.menu-icon {
-    font-size: 24px;
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
 }
 
-.mobile-menu {
+/* ---------- Brand ---------- */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+  flex-shrink: 0;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 11px;
+  background: var(--gradient);
+  color: #fff;
+  font-size: 1.05rem;
+  box-shadow: 0 8px 20px -8px rgba(168, 85, 247, 0.9);
+  transition: transform 0.35s var(--ease);
+}
+
+.brand:hover .brand-mark { transform: rotate(-8deg) scale(1.06); }
+
+.brand-dot { color: var(--accent); }
+
+/* ---------- Desktop nav ---------- */
+/* With the Resume CTA gone, the links take over that space on the right */
+.nav-desktop {
+  margin-left: auto;
+}
+
+.nav-desktop ul {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.nav-desktop a {
+  position: relative;
+  display: block;
+  padding: 0.55rem 1.05rem;
+  border-radius: var(--radius-full);
+  color: var(--text-muted);
+  font-size: clamp(0.95rem, 0.92rem + 0.15vw, 1.05rem);
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  transition: color 0.25s var(--ease), background 0.25s var(--ease);
+}
+
+.nav-desktop a:hover {
+  color: var(--text);
+  background: var(--surface);
+}
+
+.nav-desktop a.is-active {
+  color: var(--text);
+  background: rgba(168, 85, 247, 0.14);
+}
+
+.nav-desktop a.is-active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  width: 18px;
+  height: 2px;
+  transform: translateX(-50%);
+  border-radius: var(--radius-full);
+  background: var(--gradient);
+}
+
+/* ---------- Menu toggle ---------- */
+.menu-toggle {
+  display: none;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 1.35rem;
+  transition: background 0.25s var(--ease), border-color 0.25s var(--ease);
+}
+
+.menu-toggle:hover {
+  background: var(--surface-hover);
+  border-color: var(--primary);
+}
+
+/* ---------- Mobile drawer ---------- */
+.nav-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  background: rgba(6, 2, 12, 0.6);
+  backdrop-filter: blur(3px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s var(--ease), visibility 0.35s var(--ease);
+}
+
+.nav-backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-mobile {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 95;
+  width: min(340px, 84vw);
+  height: 100dvh;
+  padding: calc(var(--nav-h) + 2rem) 1.75rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background: var(--bg-elev-1);
+  border-left: 1px solid var(--border);
+  box-shadow: -30px 0 60px -30px rgba(0, 0, 0, 0.9);
+  transform: translateX(100%);
+  visibility: hidden;
+  transition: transform 0.4s var(--ease), visibility 0.4s var(--ease);
+}
+
+.nav-mobile.is-open {
+  transform: translateX(0);
+  visibility: visible;
+}
+
+.nav-mobile ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.nav-mobile a {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius);
+  color: var(--text-muted);
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: color 0.25s var(--ease), background 0.25s var(--ease),
+    transform 0.25s var(--ease);
+}
+
+.nav-mobile a:hover,
+.nav-mobile a.is-active {
+  color: var(--text);
+  background: var(--surface);
+  transform: translateX(4px);
+}
+
+.nav-mobile a.is-active { background: rgba(168, 85, 247, 0.14); }
+
+.nav-mobile-index {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  font-weight: 400;
+  color: var(--primary-soft);
+}
+
+/* Stagger the links in as the drawer slides open */
+.nav-mobile.is-open li {
+  animation: nav-item-in 0.4s var(--ease) backwards;
+  animation-delay: calc(120ms + var(--i) * 55ms);
+}
+
+@keyframes nav-item-in {
+  from {
+    opacity: 0;
+    transform: translateX(18px);
+  }
+}
+
+.nav-mobile-cta {
+  margin-top: auto;
+  width: 100%;
+}
+
+/* ---------- Breakpoints ---------- */
+@media (max-width: 860px) {
+  .nav-desktop { display: none; }
+
+  .menu-toggle { display: grid; }
+}
+
+@media (min-width: 861px) {
+  /* Keep the drawer fully inert on desktop */
+  .nav-mobile,
+  .nav-backdrop {
     display: none;
-}
-
-.web-menu {
-    display: flex;
-}
-
-.logo {
-    display: flex;
-    font-size: 36px;
-    color: blueviolet;
-    font-weight: 800;
-}
-
-@media only screen and (max-width : 768px) {
-    .mobile-menu {
-        display: flex;
-    }
-
-    .web-menu {
-        display: none;
-    }
-
-    .logo {
-        font-size: 24px;
-    }
+  }
 }

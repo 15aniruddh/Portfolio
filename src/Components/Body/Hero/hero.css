@@ -1,0 +1,376 @@
+.hero {
+  position: relative;
+  padding-top: calc(var(--nav-h) + clamp(1.5rem, 0.75rem + 3.5vw, 3.5rem));
+  padding-bottom: clamp(2rem, 1.5rem + 2vw, 3rem);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* ---------- Ambient background ---------- */
+.hero-ambient {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.5;
+}
+
+.orb-1 {
+  width: min(48vw, 540px);
+  aspect-ratio: 1;
+  top: -14%;
+  left: -10%;
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.65), transparent 68%);
+  animation: drift 18s ease-in-out infinite alternate;
+}
+
+.orb-2 {
+  width: min(42vw, 460px);
+  aspect-ratio: 1;
+  top: 18%;
+  right: -12%;
+  background: radial-gradient(circle, rgba(244, 114, 182, 0.5), transparent 68%);
+  animation: drift 22s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes drift {
+  from { transform: translate3d(0, 0, 0) scale(1); }
+  to { transform: translate3d(40px, 50px, 0) scale(1.12); }
+}
+
+/* Faint blueprint grid, faded out toward the bottom */
+.grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 25%, #000 20%, transparent 78%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 25%, #000 20%, transparent 78%);
+}
+
+/* ---------- Layout ---------- */
+.hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  align-items: center;
+  gap: clamp(2rem, 1rem + 4vw, 4.5rem);
+  margin-bottom: clamp(2rem, 1.5rem + 2.5vw, 3.5rem);
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.15rem;
+}
+
+/* ---------- Availability pill ---------- */
+.availability {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.4rem 0.9rem 0.4rem 0.65rem;
+  border: 1px solid rgba(52, 211, 153, 0.32);
+  border-radius: var(--radius-full);
+  background: rgba(52, 211, 153, 0.1);
+  color: var(--success);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.availability-dot {
+  position: relative;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--success);
+}
+
+.availability-dot::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 1px solid var(--success);
+  animation: ping 2s var(--ease) infinite;
+}
+
+@keyframes ping {
+  0% { opacity: 0.9; transform: scale(0.6); }
+  80%, 100% { opacity: 0; transform: scale(1.5); }
+}
+
+/* ---------- Headline ---------- */
+.hero-greeting {
+  color: var(--text-muted);
+  font-size: clamp(1rem, 0.9rem + 0.4vw, 1.2rem);
+}
+
+.hero-name {
+  font-size: var(--fs-display);
+  font-weight: 800;
+  /* Descenders in the gradient text need the extra room */
+  padding-bottom: 0.08em;
+}
+
+.hero-role {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  min-height: 2.4em;
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 0.95rem + 1vw, 1.75rem);
+  font-weight: 600;
+  color: var(--text);
+}
+
+.hero-role-prefix {
+  font-family: var(--font-mono);
+  font-size: 0.75em;
+  color: var(--primary-soft);
+}
+
+.hero-role-word {
+  display: inline-block;
+  animation: role-in 0.5s var(--ease);
+}
+
+@keyframes role-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+    filter: blur(4px);
+  }
+}
+
+.hero-summary {
+  max-width: 54ch;
+  color: var(--text-muted);
+}
+
+/* ---------- Actions ---------- */
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 0.6rem;
+}
+
+.hero-socials {
+  display: flex;
+  gap: 0.65rem;
+  margin-top: 0.75rem;
+}
+
+.hero-socials a {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  transition: color 0.25s var(--ease), border-color 0.25s var(--ease),
+    transform 0.25s var(--ease), background 0.25s var(--ease);
+}
+
+.hero-socials a:hover {
+  color: var(--text);
+  border-color: var(--primary);
+  background: rgba(168, 85, 247, 0.14);
+  transform: translateY(-3px);
+}
+
+/* ---------- Hero artwork ---------- */
+.hero-visual {
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.art-frame {
+  position: relative;
+  width: min(100%, 420px);
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+}
+
+.art-glow {
+  position: absolute;
+  inset: 6%;
+  border-radius: var(--radius-lg);
+  background: conic-gradient(
+    from 180deg,
+    rgba(168, 85, 247, 0.75),
+    rgba(244, 114, 182, 0.75),
+    rgba(56, 189, 248, 0.6),
+    rgba(168, 85, 247, 0.75)
+  );
+  filter: blur(38px);
+  opacity: 0.45;
+  animation: spin 16s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(1turn); }
+}
+
+.art {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* The source art carries a lot of empty space at the top, so crop to the
+     illustration rather than letterboxing it into the frame. */
+  object-fit: cover;
+  object-position: center 62%;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-strong);
+  background: linear-gradient(160deg, var(--bg-elev-2), var(--bg-elev-1));
+  box-shadow: var(--shadow);
+}
+
+/* ---------- Floating tech chips ---------- */
+.floating-chip {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-full);
+  background: rgba(24, 12, 42, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  box-shadow: var(--shadow);
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-chip i {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* Positioned clockwise around the frame; delays are staggered inline so the
+   ring drifts out of phase rather than bobbing in unison. */
+/* Top edge */
+.chip-mongo      { top: -5%;    left: 14%;  }
+.chip-typescript { top: -5%;    left: 56%;  }
+
+/* Right edge */
+.chip-aws        { top: 12%;    right: -5%; }
+.chip-serverless { top: 62%;    right: -6%; }
+
+/* Bottom edge */
+.chip-python     { bottom: -5%; left: 6%;   }
+.chip-postgres   { bottom: -5%; left: 40%;  }
+.chip-redis      { bottom: 13%; right: 16%; }
+
+/* Left edge */
+.chip-docker     { top: 14%;    left: -7%;  }
+.chip-node       { top: 42%;    left: -9%;  }
+.chip-javascript { top: 70%;    left: -6%;  }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+/* ---------- Stats strip ---------- */
+.stats-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--border);
+  overflow: hidden;
+}
+
+.stats-strip li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: clamp(1.1rem, 0.9rem + 0.7vw, 1.75rem);
+  background: var(--bg-elev-1);
+}
+
+.stats-strip strong {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2.1rem);
+  font-weight: 700;
+  line-height: 1.1;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.stats-strip span {
+  color: var(--text-dim);
+  font-size: var(--fs-xs);
+  line-height: 1.5;
+}
+
+/* ---------- Breakpoints ---------- */
+@media (max-width: 960px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  /* Headline leads, artwork follows below it */
+  .hero-visual {
+    margin-inline: auto;
+    max-width: 380px;
+  }
+
+  /* Only the two chips that crowd the corners drop out at this size */
+  .chip-typescript,
+  .chip-postgres { display: none; }
+
+  .stats-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 560px) {
+  .hero-actions { width: 100%; }
+  .hero-actions .btn { flex: 1 1 100%; }
+
+  .hero-visual { max-width: min(300px, 82vw); }
+
+  .floating-chip {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.68rem;
+    gap: 0.35rem;
+  }
+
+  /* Tuck the side chips against the frame so they are not clipped by the
+     hero's overflow on narrow viewports */
+  .chip-docker,
+  .chip-node,
+  .chip-javascript { left: -2%; }
+
+  .chip-aws,
+  .chip-serverless { right: -2%; }
+
+  /* Only Serverless drops at phone widths — it is the widest chip and the
+     one most likely to be clipped on a narrow viewport */
+  .chip-serverless { display: none; }
+}
+
+@media (max-width: 400px) {
+  .stats-strip { grid-template-columns: 1fr; }
+}

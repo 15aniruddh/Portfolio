@@ -1,5 +1,5 @@
-.projects {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.25rem, 1rem + 1.5vw, 2.25rem);
 }

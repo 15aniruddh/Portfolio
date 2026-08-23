@@ -1,97 +1,56 @@
+/**
+ * Icons are class names rather than JSX, so this stays a pure data module and
+ * the rendering layer owns all markup.
+ *
+ * Two icon sources are supported:
+ *   "devicon-*"  - a devicon font class
+ *   "si:<key>"   - a react-icons/si component, resolved in skill-card.js
+ *                  (used where devicon has no icon at all)
+ *
+ * Icons whose brand colour is near-black omit the `colored` class so they
+ * inherit the card's light text colour instead of vanishing.
+ */
 export const SkillData = [
-    {
-        type: 'FrontEnd',
-        list: [
-            {
-                name: 'HTML5',
-                icon: <i class="devicon-html5-plain colored"></i>
-            },
-            {
-                name: 'CSS5',
-                icon: <i class="devicon-css3-plain colored"></i>              
-            },
-            {
-                name: 'TailwindCSS',
-                icon: <i class="devicon-tailwindcss-plain colored"></i>                            
-            },
-            {
-                name: 'Bootstrap',
-                icon: <i class="devicon-bootstrap-plain colored"></i>                          
-            },
-            {
-                name: 'JavaScript',
-                icon: <i class="devicon-javascript-plain colored"></i>              
-            },         
-            {
-                name: 'ReactJS',
-                icon: <i class="devicon-react-original colored"></i>                    
-            },
-            {
-                name: 'NextJS',
-                icon: <i class="devicon-nextjs-original colored"></i>                                             
-            }           
-        ],
-    },
-    {
-        type: 'BackEnd',
-        list: [
-            {
-                name: 'NodeJS',
-                icon: <i class="devicon-nodejs-plain colored"></i>                   
-            },
-            {
-                name: 'Java',
-                icon: <i class="devicon-java-plain colored"></i>                            
-            },
-            {
-                name: 'Python',
-                icon: <i class="devicon-python-plain"></i>                                                                
-            },
-            {
-                name: 'MongoDB',
-                icon: <i class="devicon-mongodb-plain colored"></i>                                  
-            },
-            {
-                name: 'Redis',
-                icon: <i class="devicon-redis-plain colored"></i>                                  
-            },
-            {
-                name: 'MySQL',
-                icon: <i class="devicon-mysql-plain colored"></i>                                  
-            },
-            {
-                name: 'SpringBoot',
-                icon: <i class="devicon-spring-plain colored"></i>                                                       
-            },
-            {
-                name: 'C++',
-                icon: <i class="devicon-cplusplus-plain colored"></i>                                 
-            }
-        ],
-    },
-    {
-        type: 'DevOps',
-        list: [
-            {
-                name: 'GitHub',
-                icon: <i class="devicon-github-original colored"></i>                                          
-            },
-            {
-                name: 'BitBucket',
-                icon: <i class="devicon-bitbucket-plain colored"></i>                                 
-            },
-            {
-                name: 'GitLab',
-                icon: <i class="devicon-gitlab-plain colored"></i>                                 
-            },
-            {
-                name: 'Docker',
-                icon: <i class="devicon-docker-plain colored"></i>                                 
-            },
-            {
-                name: 'AWS',
-                icon: <i class="devicon-amazonwebservices-plain-wordmark"></i>                                               
-            }
-        ],
-    }
-]
+  {
+    type: "Frontend",
+    caption: "Interfaces that stay fast and consistent",
+    list: [
+      { name: "HTML5", icon: "devicon-html5-plain colored" },
+      { name: "CSS3", icon: "devicon-css3-plain colored" },
+      { name: "TailwindCSS", icon: "devicon-tailwindcss-plain colored" },
+      { name: "Bootstrap", icon: "devicon-bootstrap-plain colored" },
+      { name: "JavaScript", icon: "devicon-javascript-plain colored" },
+      { name: "TypeScript", icon: "devicon-typescript-plain colored" },
+      { name: "ReactJS", icon: "devicon-react-original colored" },
+      { name: "NextJS", icon: "devicon-nextjs-plain" },
+    ],
+  },
+  {
+    type: "Backend",
+    caption: "APIs, services and the data behind them",
+    list: [
+      { name: "NodeJS", icon: "devicon-nodejs-plain colored" },
+      { name: "Java", icon: "devicon-java-plain colored" },
+      { name: "Python", icon: "devicon-python-plain colored" },
+      { name: "Django", icon: "devicon-django-plain" },
+      { name: "Flask", icon: "devicon-flask-original" },
+      { name: "Serverless", icon: "si:serverless" },
+      { name: "MongoDB", icon: "devicon-mongodb-plain colored" },
+      { name: "PostgreSQL", icon: "devicon-postgresql-plain colored" },
+      { name: "MySQL", icon: "devicon-mysql-plain colored" },
+      { name: "Redis", icon: "devicon-redis-plain colored" },
+    ],
+  },
+  {
+    type: "DevOps",
+    caption: "Shipping, scaling and observing it all",
+    list: [
+      { name: "AWS", icon: "devicon-amazonwebservices-plain-wordmark" },
+      { name: "Docker", icon: "devicon-docker-plain colored" },
+      { name: "Vercel", icon: "devicon-vercel-original" },
+      { name: "GitHub", icon: "devicon-github-original" },
+      { name: "GitLab", icon: "devicon-gitlab-plain colored" },
+      { name: "BitBucket", icon: "devicon-bitbucket-original colored" },
+    ],
+  },
+];

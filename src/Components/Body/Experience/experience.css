@@ -1,5 +1,29 @@
-.experiences {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.25rem, 1rem + 1vw, 2rem);
+  padding-left: clamp(1.5rem, 1rem + 1.5vw, 2.5rem);
+}
+
+/* The rail itself */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 5px;
+  width: 2px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(
+    180deg,
+    var(--primary) 0%,
+    var(--accent) 45%,
+    transparent 100%
+  );
+  opacity: 0.55;
+}
+
+@media (max-width: 560px) {
+  .timeline { padding-left: 1.35rem; }
 }

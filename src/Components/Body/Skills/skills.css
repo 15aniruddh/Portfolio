@@ -1,35 +1,40 @@
-.skills {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: clamp(1rem, 0.8rem + 1vw, 1.5rem);
+  align-items: start;
 }
 
-.skills-section {
-    display: flex;
-    justify-content: space-between;
-    margin: 12px 0px;
+.skills-group {
+  padding: clamp(1.25rem, 1rem + 1vw, 1.85rem);
 }
 
-.skills-section-title {
-    font-size: 24px;
-    font-weight: 600;
+.skills-group-head {
+  padding-bottom: 1.1rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border);
 }
 
+.skills-group-head h3 {
+  font-size: var(--fs-h3);
+  margin-bottom: 0.3rem;
+}
+
+.skills-group-head p {
+  color: var(--text-dim);
+  font-size: var(--fs-xs);
+  line-height: 1.6;
+}
+
+/* A uniform grid rather than a wrapping flex row: every chip fills its cell,
+   so rows end flush instead of leaving a ragged right edge. */
 .skills-list {
-    display: flex;
-    justify-content: flex-end;
-    flex-wrap: nowrap;
-    max-width: 70%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.6rem;
 }
 
-@media only screen and (max-width : 768px) {
-    .skills-list {
-        justify-content: center;
-        max-width: 100%;
-    }
-
-    .skills-section {
-        flex-direction: column;
-        align-items: center;
-    }
+/* An odd trailing chip spans the full width instead of sitting alone */
+.skills-list .skill-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
 }
