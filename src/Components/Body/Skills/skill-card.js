@@ -1,13 +1,16 @@
-import React from 'react'
-import './skill-card.css'
+import React from "react";
+import TechIcon from "../../Common/TechIcon/tech-icon";
+import "./skill-card.css";
 
 function SkillCard({ skill }) {
   return (
-    <div className='skill-card'>
-        <div className='skill-icon'>{ skill.icon }</div>
-        <label className='skill-name'>{ skill.name }</label>
-    </div>
-  )
+    <li className="skill-card">
+      <span className="skill-icon" aria-hidden="true">
+        <TechIcon icon={skill.icon} />
+      </span>
+      <span className="skill-name">{skill.name}</span>
+    </li>
+  );
 }
 
 export default SkillCard;

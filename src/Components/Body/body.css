@@ -1,4 +1,17 @@
 .body {
-    padding: 12px;
-    padding-bottom: 6px;
+  position: relative;
+  display: block;
+}
+
+/* Alternating section tint gives the long scroll some rhythm without
+   introducing hard edges. */
+#experience,
+#skills {
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(255, 255, 255, 0.018) 12%,
+    rgba(255, 255, 255, 0.018) 88%,
+    transparent
+  );
 }
