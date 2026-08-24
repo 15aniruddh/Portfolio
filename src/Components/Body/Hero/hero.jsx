@@ -4,6 +4,8 @@ import { FaGithub, FaLinkedinIn, FaGitlab } from "react-icons/fa";
 import { Profile, Stats } from "../../Data/Profile";
 import { SocialData } from "../../Data/Social";
 import TechIcon from "../../Common/TechIcon/tech-icon";
+import ResumePdf from "../../Data/Resume.pdf";
+import CodingImg from "../../../Pics/Coding.webp";
 import "./hero.css";
 
 const SOCIAL_ICONS = {
@@ -97,7 +99,7 @@ function Hero() {
             </a>
             <a
               className="btn btn-ghost"
-              href={require("../../Data/Resume.pdf")}
+              href={ResumePdf}
               download="Aniruddh-Patil-Resume.pdf"
             >
               <FiDownload aria-hidden="true" />
@@ -128,7 +130,7 @@ function Hero() {
           <div className="art-frame">
             <div className="art-glow" aria-hidden="true" />
             <img
-              src={require("../../../Pics/Coding.webp")}
+              src={CodingImg}
               alt={`${Profile.name}, ${Profile.role}`}
               className="art"
               width="520"

@@ -3,6 +3,7 @@ import { FaGithub, FaLinkedinIn, FaGitlab } from "react-icons/fa";
 import { FiArrowUpRight, FiDownload } from "react-icons/fi";
 import { SocialData } from "../../Data/Social";
 import { Profile } from "../../Data/Profile";
+import ResumePdf from "../../Data/Resume.pdf";
 import "./contact.css";
 
 const SOCIAL_ICONS = {
@@ -29,7 +30,7 @@ function Contact() {
 
           <a
             className="btn btn-primary contact-resume"
-            href={require("../../Data/Resume.pdf")}
+            href={ResumePdf}
             download="Aniruddh-Patil-Resume.pdf"
           >
             <FiDownload aria-hidden="true" />
