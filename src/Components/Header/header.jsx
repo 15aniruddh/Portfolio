@@ -3,6 +3,7 @@ import { HiOutlineMenuAlt4, HiOutlineX } from "react-icons/hi";
 import { FiDownload } from "react-icons/fi";
 import { NavLinks, Profile } from "../Data/Profile";
 import useScrollSpy from "../Common/hooks/useScrollSpy";
+import ResumePdf from "../Data/Resume.pdf";
 import "./header.css";
 
 /* "hero" is tracked but has no nav link, so nothing is highlighted up top */
@@ -112,7 +113,7 @@ function Header() {
 
         <a
           className="btn btn-ghost nav-mobile-cta"
-          href={require("../Data/Resume.pdf")}
+          href={ResumePdf}
           download="Aniruddh-Patil-Resume.pdf"
           onClick={close}
           tabIndex={isOpen ? 0 : -1}
