@@ -61,6 +61,21 @@ function ProjectCard({ project, index }) {
               GitLab
             </a>
           )}
+          {project.live !== undefined && (
+            <a
+              className={`link-button ${project.live ? "" : "is-disabled"}`}
+              href={project.live || undefined}
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label={`${project.title} live site`}
+            >
+              <span
+                className={`live-dot ${project.isLive === false ? "is-down" : ""}`}
+                aria-hidden="true"
+              />
+              Live
+            </a>
+          )}
         </div>
       </div>
     </article>
