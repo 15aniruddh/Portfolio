@@ -11,7 +11,7 @@ export const ProjectData =[
         github:"https://github.com/15aniruddh/BloodBankManagementSystem",
         live:"",
         isLive:false,
-        image:require('../../Pics/BloodBankManagementSystem.webp'),
+        image:BloodBankManagementSystemImg,
         gitlab:"https://gitlab.com/15aniruddh/blood-bank-management-system",
 
     },
@@ -23,7 +23,7 @@ export const ProjectData =[
         github:"https://github.com/15aniruddh/LifeCare-Portal",
         live:"",
         isLive:false,
-        image:require('../../Pics/LifeCare-Portal.webp'),
+        image:LifeCarePortalImg,
         gitlab:"https://gitlab.com/15aniruddh/lifecare-portal/-/tree/master",
 
     },
@@ -34,7 +34,7 @@ export const ProjectData =[
         tags:["Angular2.js","HTML5","CSS","TypeScript","Firebase","Bootstrap"],
         github:"https://github.com/15aniruddh/Recipe_Book",
         live:"https://recipe-book-five-zeta.vercel.app/",
-        image:require('../../Pics/Recipe-Book.webp'),
+        image:RecipeBookImg,
         gitlab:"",
 
     }
