@@ -21,7 +21,7 @@ export const ProjectData =[
         about:"LifeCare Portal simplifies hospital management and operations, inspired by the challenges of the recent pandemic. It provides easy access to crucial information like oxygen and bed availability and helps users find nearby hospitals efficiently, saving time and improving access to healthcare facilities.",
         tags:["React.js","HTML5","CSS","JavaScript","Python","FastAPI","OAuth","AWS S3","AWS Lambda","AWS CloudFront","Domain","SQL","Bootstrap","Docker"],
         github:"https://github.com/15aniruddh/LifeCare-Portal",
-        live:"https://lifecare-portal.15aniruddh.is-a.dev",
+        live:"https://d1zxk18v5sd6g6.cloudfront.net",
         isLive:true,
         image:LifeCarePortalImg,
         gitlab:"https://gitlab.com/15aniruddh/lifecare-portal/-/tree/master",
