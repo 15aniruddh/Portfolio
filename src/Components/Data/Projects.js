@@ -33,7 +33,7 @@ export const ProjectData =[
         about:"Recipe Book is a dynamic application built with Angular 2 and Firebase. It lets users create, view, and share recipes, with real-time updates ensuring seamless collaboration and instant synchronization of changes.",
         tags:["Angular2.js","HTML5","CSS","TypeScript","Firebase","OAuth","Bootstrap"],
         github:"https://github.com/15aniruddh/Recipe_Book",
-        live:"https://recipe-book-five-zeta.vercel.app/",
+        live:"https://recipe.15aniruddh.co.in",
         image:RecipeBookImg,
         gitlab:"",
 
