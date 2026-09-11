@@ -13,7 +13,7 @@
 ![Vitest](https://img.shields.io/badge/Vitest-6E9F18?style=flat-square&logo=vitest&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 
-**[🌐 View Live &rarr;](https://portfolio-15aniruddh.vercel.app/)**
+**[🌐 View Live &rarr;](https://www.15aniruddh.co.in/)**
 
 </div>
 
