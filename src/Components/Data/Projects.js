@@ -1,18 +1,18 @@
-import BloodBankManagementSystemImg from "../../Pics/BloodBankManagementSystem.webp";
+import PdfQaImg from "../../Pics/Pdf-QA.webp";
 import LifeCarePortalImg from "../../Pics/LifeCare-Portal.webp";
 import RecipeBookImg from "../../Pics/Recipe-Book.webp";
 
 export const ProjectData =[
     {
         id: 1,
-        title:"Blood Bank Management System",
-        about:"Blood Bank Management System efficiently collects, stores, and provides blood from voluntary donors. It categorizes blood by type and location, ensuring it’s available for hospitals and healthcare facilities to deliver life-saving treatments.",
-        tags:["Java","MySQL","JDBC"],
-        github:"https://github.com/15aniruddh/BloodBankManagementSystem",
-        live:"",
-        isLive:false,
-        image:BloodBankManagementSystemImg,
-        gitlab:"https://gitlab.com/15aniruddh/blood-bank-management-system",
+        title:"PDF Q&A",
+        about:"PDF Q&A is a retrieval-augmented generation app that answers questions about documents you upload, with sources cited.",
+        tags:["Python","React.js","RAG","AI (Gemini LLM Model)","Embedding", "Vector Database (Qdrant)"],
+        github:"https://github.com/15aniruddh/my_rag_app",
+        live:"https://rag-app.15aniruddh.co.in",
+        isLive:true,
+        image:PdfQaImg,
+        gitlab:"",
 
     },
     {

@@ -2,16 +2,17 @@ export const ExperienceData =[
     {
         id: 1,
         title:"Horizon Broadband Private Limited",
-        date:"July 2023 – Present",
+        date:"Jun 2023 – Present",
         about: `
-            - <b><u>Designed, built, and maintained production serverless APIs</u></b> for the <b><u>Vivre SaaS platform</u></b> using <b><u>Node.js</u></b>, <b><u>AWS Lambda</u></b> and <b><u>API Gateway</u></b> — supporting real end-users with <b><u>high availability</u></b> and <b><u>low operational overhead</u></b>.
-            - <b><u>Slashed API response times</u></b> from 2–4 seconds to <b><u>∼150ms</u></b> by integrating <b><u>Redis caching</u></b>, delivering a <b><u>10×</u></b> latency improvement and reducing unnecessary compute invocations.
-            - Implemented <b><u>JWT-based authentication</u></b> and <b><u>role-based access control (RBAC)</u></b> ensuring secure, fine-grained access for different user roles across the platform.
-            - Built an <b><u>image optimization pipeline (PNG/JPG → WebP)</u></b> that improved page load performance and reduced CDN bandwidth costs platform-wide.
-            - Architected <b><u>HZ-CMS</u></b>, an adapter-layer SDK that onboards multiple content partners into a single unified API — standardizing response contracts and eliminating per-partner platform changes for downstream consumers.
-            - Contributed to infrastructure setup using <b><u>AWS CloudFormation</u></b>, <b><u>ECS</u></b>, <b><u>S3</u></b>, <b><u>CloudFront</u></b>, <b><u>CloudWatch</u></b>, <b><u>AWS Glue</u></b> and <b><u>Athena</u></b> for data processing and observability
+            - Build and maintain <b><u>full-stack features</u></b> for <b><u>Vivre</u></b>, a live <b><u>multi-tenant SaaS platform</u></b>, pairing <b><u>Node.js</u></b> services on <b><u>AWS Lambda</u></b> and <b><u>API Gateway</u></b> with the platform's front-end experience under <b><u>high-availability</u></b> requirements.
+            - Cut API response times from 2–4s to <b><u>∼150ms</u></b> — a <b><u>10×</u></b> latency improvement — by designing and integrating a <b><u>Redis caching layer</u></b>, also eliminating redundant <b><u>Lambda</u></b> invocations and lowering compute spend.
+            - Implemented <b><u>JWT</u></b>-based authentication and <b><u>role-based access control (RBAC)</u></b>, giving fine-grained, <b><u>tenant-aware</u></b> permissions across both the UI and the <b><u>REST APIs</u></b>.
+            - Architected <b><u>HZ-CMS</u></b>, an adapter-layer <b><u>SDK</u></b> that normalizes heterogeneous content-partner responses into a single unified <b><u>API contract</u></b> — removing per-partner platform changes and cutting new-partner integration time.
+            - Built an <b><u>image optimization pipeline</u></b> (PNG/JPG → <b><u>WebP</u></b>) that improved page-load performance and reduced <b><u>CDN</u></b> bandwidth costs platform-wide.
+            - Wrote a <b><u>Python</u></b> migration service that ingests records from 30 content-partner APIs into the production database.
+            - Provisioned and maintained infrastructure with <b><u>AWS CloudFormation, ECS, S3, CloudFront</u></b> and <b><u>CloudWatch</u></b>, owned the <b><u>CI/CD</u></b> pipelines for deployment, and used <b><u>AWS Glue/Athena</u></b> for data processing and observability.
         `,
-        tags:["Software Engineer (SDE)"]        
+        tags:["Software Engineer (SDE)"]
     },
     {
         id: 2,
@@ -20,6 +21,6 @@ export const ExperienceData =[
         about:`
             – Developed and refined <b><u>UI components</u></b> using <b><u>Angular 2</u></b>, resolving bugs and improving <b><u>layout consistency</u></b> across <b><u>production dashboards</u></b> used by operations teams.
         `,
-        tags:["Intern"]        
+        tags:["Intern"]
     }
 ]
