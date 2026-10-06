@@ -2,7 +2,7 @@ export const ExperienceData =[
     {
         id: 1,
         title:"Horizon Broadband Private Limited",
-        date:"Jun 2023 – Present",
+        date:"Jun 2023 – Sept 2026",
         about: `
             - Build and maintain <b><u>full-stack features</u></b> for <b><u>Vivre</u></b>, a live <b><u>multi-tenant SaaS platform</u></b>, pairing <b><u>Node.js</u></b> services on <b><u>AWS Lambda</u></b> and <b><u>API Gateway</u></b> with the platform's front-end experience under <b><u>high-availability</u></b> requirements.
             - Cut API response times from 2–4s to <b><u>∼150ms</u></b> — a <b><u>10×</u></b> latency improvement — by designing and integrating a <b><u>Redis caching layer</u></b>, also eliminating redundant <b><u>Lambda</u></b> invocations and lowering compute spend.
